@@ -1,0 +1,294 @@
+1-intro 
+download font family
+
+2- Create Containers And Add Font Icons
+
+- download Icons 
+
+- add webfonts and all.min(file) to the main file of css
+
+- get the icon code from the icons website  
+
+- Container : 
+    - handle the main content of the page
+    - must have padding left and right
+    - add media queries
+
+3- Create Header And Links Part 1
+    - every parent have padding top and bottom
+
+4-Create Header And Links Part 2
+
+5-Create Landing Section
+
+6-Create Features Section 
+
+7-Create Services Section Part 1    
+    p + div 
+    next div for the paragraph
+
+8-Create Services Section Part 2    
+
+9-
+
+10 - Create About Section Part 1
+    can add padding to the parent padding with calc(var(padding) + more-padding)
+
+11 - Create About Section Part 2
+
+12 - Create Contact Section And Footer
+
+13 - Improve Code And Add Scrolling
+    scroll-behavior: smooth;
+    help to make scroll smooth
+
+-------------------------------------------------------------------------------------
+Template 2
+
+1-
+
+2- Create Header Part 1
+
+3- Create Header Part 2
+
+4- Create Header Part 3 Responsive
+
+5- Landing Section Part 1
+
+6- Landing Section Part 2
+
+7 - Heading Component
+    use max-width: 100%; for Responsive in the mobile
+
+8- 
+
+9-Design Section
+    to put the icon in the pesudo elements must have  
+        - font-family: "Font Awesome 5 Free";
+        - content: "\f108"; ==> icon unicode
+        font-weight: 900; ==> there is icons need font weight
+
+10- 
+
+11 - Video Section
+    aspect-ratio ?? 
+
+12 - About Section
+  bottom: -120px;
+  margin-top: -120px;
+      to decrease the space left above the div
+
+13 - Statistics Section 
+
+14 - Our Skills Section - Html 
+    use inline style when we need value for html 
+    
+    content attribue :
+        data-progress="90%"
+
+15- Our Skills Testimonials 2
+
+16 - Our Skills - Progress Part 3
+
+17 - Quote Section
+    q ==> for quote elements can be edited and overwrite
+
+18- Pricing Section - Part 1
+
+19- Pricing Section - Part 2
+
+20 - Subscribe Section
+
+21 - Contact Us Section
+
+    address tag ==> used for addresses    
+        <address>
+        </address>
+
+    put the elements at the right corner of the parent
+        display: flex;
+        margin-left: auto;
+22 - Footer
+
+23 - The End And Advices
+
+-------------------------------------------------------------------------------------
+Template 3
+1-
+2-
+
+3 - Header Section Part 1
+    height ==> keep elements stable
+
+4 - Header Section Part 2 
+
+5 - Landing Section Part 1
+
+6- Landing Section Part 2
+    bouncing effect ??
+
+7 - Mega Menu Part 1
+
+8 - Mega Menu Part 2
+
+9 - Create The Main Title
+
+10 - Articles Section Part 1
+    if there is Container has border raduis and image to make image has raduis as the container use overflow :hidden
+    border-radius: 6px;
+    overflow: hidden;
+    shadow ==> 
+        box-shadow: 0 2px 15px rgb(0 0, 0 / 20%); 
+
+11-
+
+12 - Gallery Section
+    box-shadow: 0 2px 20px rgb(0 0, 0 / 13%); 
+    box-shadow: 0 2px 4px rgb(0 0, 0 / 13%); 
+
+    flashing effect
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgb(255 255 255 / 50% );
+        width: 0;
+        height: 0;
+        opacity: 0;
+        z-index: 2;
+
+    .gallery .box:hover .image::before{
+        animation: flashing .7s;
+        }
+    @keyframes flashing{
+        0% ,40%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+            width: 200%;
+            height: 200%;
+        }}
+
+13 - Features Section Part 1
+    arrow moving effect
+    .features .box .img-holder::after{
+    content: "";
+    position: absolute;
+    bottom: 3.6px;
+    right: 0;
+    border-style:solid ;
+    border-width: 0 0 170px 500px;
+    border-color: transparent transparent white transparent;
+    transition: var(--main-transtion);
+
+    }
+    .features .box:hover .img-holder::after{
+        border-width: 170px 500px 170px 500px;
+
+    }
+
+14 - Features Section Part 2
+    to be smaller than the element
+    left: 15px;
+    width: calc(100% - 30px);
+
+15-
+
+16 - Testimonials Section
+    to add box shadow
+        box-shadow: 0 2px 4px rgb(0 0 0 /7%);
+
+    to put image at the end of the card 
+        position: absolute;
+        right: -10px;
+        top: -50px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 10px solid var(--seconed-color);
+
+    make element in black and white
+        filter: grayscale(1);
+
+17-Team Members Section Part 1
+
+18-Team Members Section Part 2 
+
+19 - Services Section
+    values for box shadow
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%) ,0 2px 4px 0 rgb(0 0 0 / 12%) ;
+
+    to creat counter
+        counter-increment : counter-name
+    put it pesudo class 
+        content : counter(counter-name)
+    to be able to concatinate between message and counter
+        content: "0" counter(services);
+20 - Our Skills Section 
+
+21 - Work Steps Section
+    flow from the middle
+    .work-steps .container .info .box::before{
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 10px;
+        height: 10px; 
+        background-color: #EDEDED;
+        z-index: -1;
+        transition: var(--main-transtion);
+    }
+    .work-steps .container .info .box:hover::before{
+        width: 100%;
+        height: 100%;
+
+    }
+22 - Events Section Part 1
+
+23 - Events Section Part 2
+    cursor: pointer; ==> change the cursor to be clickable
+
+24 - Pricing Plans Section Part 1
+    - modes for text
+        writing-mode: vertical-rl;
+        how paddind start : left top right bottom
+
+25 - Pricing Plans Section Part 2
+
+26 - Video Section
+    to seperate two elements with column flex    
+        flex-direction: column;
+        justify-content: space-between;
+
+28 - Discount Section Part 1
+
+29 - Discount Section Part 2
+    to remove resize from textarea
+    resize: none;
+
+    animation for changing background
+    animation: change-background 10s linear infinite ;
+
+    @keyframes change-background {
+        0%,100%{
+            background-image: url("../images/discount-background1.jpg");
+        }
+        50%{
+            background-image: url("../images/licensed-image.jfif");
+        }
+    }
+30 - Footer Section Part 1
+
+31 - Footer Section Part 2
+    brand colors ==> color of brands
+
+32 - Separators And Shapes
+    eb.dev
+
+33 - RTL And The End
+    light house report
+
